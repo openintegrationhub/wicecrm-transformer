@@ -1,17 +1,17 @@
 {
   "title": "Transformation",
-  "description": "Generic Data Transformation Component",
+  "description": "Generic Data Transformation Component for Snazzy Contacts",
   "actions": {
-    "transform": {
-      "title": "Transform",
+    "transformToOih": {
+      "title": "Transform to OIH",
       "main": "./lib/actions/transform.js",
-      "fields": {
-        "expression": {
-          "label": "JSONata Expression",
-          "required": true,
-          "viewClass": "JSONataView"
-        }
-      },
+      "metadata" : {
+        "out" : {}
+      }
+    },
+    "transformFromOih": {
+      "title": "Transform from OIH",
+      "main": "./lib/actions/transform.js",
       "metadata" : {
         "out" : {}
       }
