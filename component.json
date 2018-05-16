@@ -2,16 +2,16 @@
   "title": "Transformation",
   "description": "Generic Data Transformation Component",
   "actions": {
-    "transformToOIH": {
-      "title": "Transform to OIH",
+    "transform": {
+      "title": "Transform",
       "main": "./lib/actions/transform.js",
-      "metadata" : {
-        "out" : {}
-      }
-    },
-    "transformFromOIH": {
-      "title": "Transform From OIH",
-      "main": "./lib/actions/transform.js",
+      "fields": {
+        "expression": {
+          "label": "JSONata Expression",
+          "required": true,
+          "viewClass": "JSONataView"
+        }
+      },
       "metadata" : {
         "out" : {}
       }
