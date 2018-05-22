@@ -11,7 +11,7 @@
     },
     "transformToOih": {
       "title": "Transform to OIH",
-      "main": "./lib/actions/transform.js",
+      "main": "./lib/actions/transformToOih.js",
       "metadata": {
         "out": {}
       }
