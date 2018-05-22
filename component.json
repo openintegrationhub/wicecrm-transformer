@@ -2,15 +2,11 @@
   "title": "Transformation",
   "description": "Generic Data Transformation Component",
   "actions": {
-    "transformfromOih": {
+    "transformFromOih": {
       "title": "Transform from OIH",
       "main": "./lib/actions/transform.js",
-      "fields": {
-        "expression": {
-          "path": "./lib/expressions/fromOih"
-        }
-      },
       "metadata": {
+        "in": "./lib/expressions/fromOih.js",
         "out": {}
       }
     },
