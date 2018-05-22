@@ -4,7 +4,7 @@
   "actions": {
     "transformFromOih": {
       "title": "Transform from OIH",
-      "main": "./lib/actions/transform.js",
+      "main": "./lib/actions/transformFromOih.js",
       "metadata": {
         "out": {}
       }
