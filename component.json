@@ -5,15 +5,20 @@
     "transformfromOih": {
       "title": "Transform from OIH",
       "main": "./lib/actions/transform.js",
-      "metadata" : {
-        "out" : {}
+      "fields": {
+        "expression": {
+          "path": "./lib/expressions/fromOih"
+        }
+      },
+      "metadata": {
+        "out": {}
       }
     },
     "transformToOih": {
       "title": "Transform to OIH",
       "main": "./lib/actions/transform.js",
-      "metadata" : {
-        "out" : {}
+      "metadata": {
+        "out": {}
       }
     }
   }
