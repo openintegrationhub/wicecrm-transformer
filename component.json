@@ -6,7 +6,6 @@
       "title": "Transform from OIH",
       "main": "./lib/actions/transform.js",
       "metadata": {
-        "in": "./lib/expressions/fromOih.js",
         "out": {}
       }
     },
