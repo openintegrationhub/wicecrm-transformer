@@ -5,15 +5,22 @@
     "transformfromOih": {
       "title": "Transform from OIH",
       "main": "./lib/actions/transform.js",
-      "metadata" : {
-        "out" : {}
+      "fields": {
+        "expression": {
+          "label": "JSONata Expression",
+          "required": true,
+          "viewClass": "JSONataView"
+        }
+      },
+      "metadata": {
+        "out": {}
       }
     },
     "transformToOih": {
       "title": "Transform to OIH",
       "main": "./lib/actions/transform.js",
-      "metadata" : {
-        "out" : {}
+      "metadata": {
+        "out": {}
       }
     }
   }
