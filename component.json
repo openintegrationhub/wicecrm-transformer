@@ -5,11 +5,6 @@
     "transformfromOih": {
       "title": "Transform from OIH",
       "main": "./lib/actions/transform.js",
-      "fields": {
-        "expression": {
-          "path": "./lib/expressions/toOih.js"
-        }
-      },
       "metadata" : {
         "out" : {}
       }
