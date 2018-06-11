@@ -1,5 +1,5 @@
-# jsonata-transform-component [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> Dedicated data transformation component for elastic.io platform based on JSONata
+# wice-jsonata-transform-component [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+> Dedicated [https://wice.de/](https://wice.de/) data transformation component for elastic.io platform based on JSONata
 
 ## Authentication
 
@@ -7,106 +7,60 @@ This component requires no authentication.
 
 ## How it works
 
-This component takes the incoming message body and applies the configured JSONata tranformation on it. It uses 
-a fact that JSONata expression is a superset of JSON document so that by default any valid JSON document is
-a valid JSONata expression.
+The component supports two actions - **Transform to OIH** and **Transform from OIH**. This means that the component takes the incoming message body from the previous step and creates a new expression in a ``JSON`` format. The new generated ``JSON`` object has specific properties which represent the input/output for the next/previous component in the flow.
+The uses a fact that JSONata expression is a superset of JSON document so that by default any valid JSON document is a valid JSONata expression.
 
-For example let's take this sample incoming message body:
+Let's see how the action **Transform from OIH** works. For example let's take this sample incoming message body from **OIH Database component** and transform it to a valid [Wice](https://wice.de) object:
+
+```js
+{
+  "rowid": msg.body.applicationRecordUid,
+  "tenant": msg.body.tenant,
+  "name": msg.body.lastName,
+  "firstname": msg.body.firstName,
+  "salutation": msg.body.salutation,
+  "birthday": msg.body.birthday
+}
+```
+The result of that transformation will be the following JSON document:
 
 ```json
 {
-  "Account": {
-    "Account Name": "Firefly",
-    "Order": [
-      {
-        "OrderID": "order103",
-        "Product": [
-          {
-            "Product Name": "Bowler Hat",
-            "ProductID": 858383,
-            "SKU": "0406654608",
-            "Description": {
-              "Colour": "Purple",
-              "Width": 300,
-              "Height": 200,
-              "Depth": 210,
-              "Weight": 0.75
-            },
-            "Price": 34.45,
-            "Quantity": 2
-          },
-          {
-            "Product Name": "Trilby hat",
-            "ProductID": 858236,
-            "SKU": "0406634348",
-            "Description": {
-              "Colour": "Orange",
-              "Width": 300,
-              "Height": 200,
-              "Depth": 210,
-              "Weight": 0.6
-            },
-            "Price": 21.67,
-            "Quantity": 1
-          }
-        ]
-      }
-    ]
-  }
+  "rowid": "198562",
+  "tenant": "617",
+  "name": "Doe",
+  "firstname": "John",
+  "salutation": "Mr.",
+  "date_of_birth": "04.11.1980"
 }
 ```
 
-You can use following JSONata expressions to transform it:
+The action **Transform to OIH** works the same way. Let's take this incoming message body from [Wice](https://wice.de) component:
 
-```jsonata
+```js
 {
-	"account": Account."Account Name",
-	"orderCount" : $count(Account.Order)
+  "recordUid": msg.body.rowid,
+  "oihLastModified": jsonata("$now()").evaluate(),
+  "lastName": msg.body.name,
+  "firstName": msg.body.firstname,
+  "salutation": msg.body.salutation,
+  "birthday": msg.body.birthday,
 }
 ```
 
-result of that transofrmation will be the following JSON document ([jsonata link](http://try.jsonata.org/B1ctn36ub)):
+The result of that transofrmation will be the following JSON document:
 
 ```json
 {
-  "account": "Firefly",
-  "orderCount": 1
+  "recordUid": "198562",
+  "oihLastModified": "2018-06-11T09:41:45.679Z",
+  "lastName": "Doe",
+  "firstName": "John",
+  "salutation": "Mr.",
+  "birthday": "04.11.1980"
 }
 ```
 
-I hope you've got the idea. Now you can also do something more complicated, like this array-to-array transformation:
-
-```jsonata
-{
-    "account": Account."Account Name",
-    "products": Account.Order.Product.({
-    	"name": $."Product Name",
-        "revenue": (Price * Quantity)
-    }),
-    "orderIDs": Account.Order[].(OrderID)
-}
-```
-
-resulting in ([jsonata link](http://try.jsonata.org/B1ctn36ub)):
-
-```json
-{
-  "account": "Firefly",
-  "products": [
-    {
-      "name": "Bowler Hat",
-      "revenue": 68.9
-    },
-    {
-      "name": "Trilby hat",
-      "revenue": 21.67
-    }
-  ],
-  "orderIDs": [
-    "order103"
-  ]
-}
-```
 
 ## License
 
