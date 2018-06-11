@@ -1,5 +1,5 @@
 # wice-jsonata-transform-component [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> Dedicated [https://wice.de/](https://wice.de/) data transformation component for elastic.io platform based on JSONata
+> Dedicated [Wice CRM](https://wice.de/) data transformation component for elastic.io platform based on JSONata
 
 ## Authentication
 
