@@ -81,13 +81,13 @@ const personFromOih = () => {
       description: 'private address data of the person'
     }],
     oihApplicationRecords: [{
-      applicationUid: 3,
-      recordUid: undefined,
+      applicationUid: '',
+      recordUid: 98765,
       created: 23215151,
       lastModified: 36542364
     },
     {
-      applicationUid: '',
+      applicationUid: 2,
       recordUid: undefined,
       created: 454545454,
       lastModified: 7878787

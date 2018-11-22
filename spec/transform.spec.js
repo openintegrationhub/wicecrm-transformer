@@ -14,7 +14,7 @@ describe('Transformation test', () => {
       .then(result => {
         expect(result.body).to.be.an('object');
         expect(result.body).to.deep.include({
-          rowid: '',
+          rowid: 98765,
           name: exp.lastName,
           firstname: exp.firstName,
           position: exp.jobTitle,
@@ -26,8 +26,8 @@ describe('Transformation test', () => {
           email: exp.contactData[3].value,
           phone: exp.contactData[0].value,
           mobile_phone: exp.contactData[5].value,
-          xing_url: exp.contactData[4].value,
-          last_update: exp.oihApplicationRecords[0].lastModified
+          xing_url: exp.contactData[4].value
+          // last_update: exp.oihApplicationRecords[0].lastModified
         });
       });
   });
