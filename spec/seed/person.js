@@ -88,7 +88,7 @@ const personFromOih = () => {
     },
     {
       applicationUid: 2,
-      recordUid: 12121,
+      recordUid: undefined,
       created: 454545454,
       lastModified: 7878787
     }

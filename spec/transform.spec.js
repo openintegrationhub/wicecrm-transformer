@@ -14,7 +14,7 @@ describe('Transformation test', () => {
       .then(result => {
         expect(result.body).to.be.an('object');
         expect(result.body).to.deep.include({
-          rowid: exp.oihApplicationRecords[1].recordUid,
+          rowid: '',
           name: exp.lastName,
           firstname: exp.firstName,
           position: exp.jobTitle,
