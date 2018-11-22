@@ -82,12 +82,12 @@ const personFromOih = () => {
     }],
     oihApplicationRecords: [{
       applicationUid: 3,
-      recordUid: 98765,
+      recordUid: undefined,
       created: 23215151,
       lastModified: 36542364
     },
     {
-      applicationUid: 2,
+      applicationUid: '',
       recordUid: undefined,
       created: 454545454,
       lastModified: 7878787

@@ -13,7 +13,6 @@ describe('Transformation test', () => {
     return transformPersonFromOih.process(messages.newMessageWithBody(exp))
       .then(result => {
         expect(result.body).to.be.an('object');
-        console.log('RES BODY: ', result.body.recordUid);
         expect(result.body).to.deep.include({
           rowid: '',
           name: exp.lastName,
