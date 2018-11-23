@@ -88,7 +88,7 @@ const personFromOih = () => {
     },
     {
       applicationUid: 2,
-      recordUid: undefined,
+      recordUid: '',
       created: 454545454,
       lastModified: 7878787
     }
@@ -112,4 +112,7 @@ const personToOih = () => {
   return expression;
 };
 
-module.exports = {personFromOih, personToOih};
+module.exports = {
+  personFromOih,
+  personToOih
+};
