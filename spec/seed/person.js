@@ -90,7 +90,11 @@ const personFromOih = () => {
       applicationUid: '2',
       recordUid: '',
       created: '454545454',
-      lastModified: ''
+      lastModified: {
+        userId: '254',
+        type: 'modification',
+        timestamp: '2018-01-02'
+      }
     }
     ]
   };

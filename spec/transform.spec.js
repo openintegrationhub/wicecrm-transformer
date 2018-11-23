@@ -27,7 +27,7 @@ describe('Transformation test', () => {
           phone: '123456789',
           mobile_phone: '98326307',
           xing_url: 'xing.de/yourUsername',
-          last_update: '36542364'
+          last_update: '2018-01-02'
         });
       });
   });
