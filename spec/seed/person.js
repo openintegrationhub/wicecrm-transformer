@@ -82,15 +82,15 @@ const personFromOih = () => {
     }],
     oihApplicationRecords: [{
       applicationUid: '',
-      recordUid: 98765,
-      created: 23215151,
-      lastModified: 36542364
+      recordUid: '98765',
+      created: '23215151',
+      lastModified: '36542364'
     },
     {
-      applicationUid: 2,
+      applicationUid: '2',
       recordUid: '',
-      created: 454545454,
-      lastModified: 7878787
+      created: '454545454',
+      lastModified: ''
     }
     ]
   };
