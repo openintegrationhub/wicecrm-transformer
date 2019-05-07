@@ -23,10 +23,10 @@ describe('Transformation test', () => {
           private_zip_code: '50667',
           private_town: 'Cologne',
           private_country: 'Germany',
-          email: 'jon@doe.com',
-          phone: '123456789',
-          mobile_phone: '98326307',
-          xing_url: 'xing.de/yourUsername',
+          // email: 'jon@doe.com',
+          // phone: '123456789',
+          // mobile_phone: '98326307',
+          // xing_url: 'xing.de/yourUsername',
           last_update: '2018-01-02'
         });
       });
