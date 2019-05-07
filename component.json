@@ -17,6 +17,13 @@
       "metadata": {
         "out": {}
       }
+    },
+    "emitOihObject": {
+      "title": "Emit an object from OIH",
+      "main": "./lib/actions/emitOihObject.js",
+      "metadata": {
+        "out": {}
+      }
     }
   }
 }
