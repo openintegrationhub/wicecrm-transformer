@@ -14,20 +14,20 @@ describe('Transformation test', () => {
       .then(result => {
         expect(result.body).to.be.an('object');
         expect(result.body).to.deep.include({
-          rowid: '98765',
+          // rowid: '98765',
           name: 'Doe',
-          firstname: 'John',
-          position: 'Sales manager',
-          private_street: 'Hohestr',
-          private_street_number: '3',
-          private_zip_code: '50667',
-          private_town: 'Cologne',
-          private_country: 'Germany',
+          firstname: 'John'
+          // position: 'Sales manager',
+          // private_street: 'Hohestr',
+          // private_street_number: '3',
+          // private_zip_code: '50667',
+          // private_town: 'Cologne',
+          // private_country: 'Germany',
           // email: 'jon@doe.com',
           // phone: '123456789',
           // mobile_phone: '98326307',
           // xing_url: 'xing.de/yourUsername',
-          last_update: '2018-01-02'
+          // last_update: '2018-01-02'
         });
       });
   });
