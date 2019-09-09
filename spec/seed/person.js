@@ -103,15 +103,21 @@ const personFromOih = () => {
 
 const personToOih = () => {
   const expression = {
-    rowid: 98123,
-    name: 'Smith',
-    firstname: 'Mark',
-    private_street: 'Main Str.',
-    private_street_number: '120',
-    position: 'Marketing Manager',
-    title: 'Prof',
-    phone: 830238131,
-    email: 'm.smith@mail.com'
+    meta: {
+      applicationUid: '93jlksd',
+      oihUidEncrypted: ''
+    },
+    data: {
+      rowid: 98123,
+      name: 'Smith',
+      firstname: 'Mark',
+      private_street: 'Main Str.',
+      private_street_number: '120',
+      position: 'Marketing Manager',
+      title: 'Prof',
+      phone: 830238131,
+      email: 'm.smith@mail.com'
+    }
   };
   return expression;
 };
