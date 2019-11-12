@@ -15,22 +15,19 @@ describe('Transformation test', () => {
         expect(result.body).to.be.an('object');
         expect(result.body.data.firstname).to.be.equal('John');
         expect(result.body.data.name).to.be.equal('Doe');
-        // expect(result.body).to.deep.include({
-        // rowid: '98765',
-        // name: 'Doe',
-        // firstname: 'John'
-        // position: 'Sales manager',
-        // private_street: 'Hohestr',
-        // private_street_number: '3',
-        // private_zip_code: '50667',
-        // private_town: 'Cologne',
-        // private_country: 'Germany',
-        // email: 'jon@doe.com',
-        // phone: '123456789',
-        // mobile_phone: '98326307',
-        // xing_url: 'xing.de/yourUsername',
-        // last_update: '2018-01-02'
-        // });
+        expect(result.body.data).to.deep.include({
+          name: 'Doe',
+          firstname: 'John',
+          position: 'Sales manager',
+          private_street: 'Hohestr',
+          private_street_number: '3',
+          private_zip_code: '50667',
+          private_town: 'Cologne',
+          private_country: 'Germany',
+          email: 'jon@doe.com',
+          phone: '123456789',
+          mobile_phone: '98326307',
+        });
       });
   });
 
@@ -48,20 +45,12 @@ describe('Transformation test', () => {
         expect(result.body).to.be.an('object');
         expect(result.body.data.firstName).to.be.equal('Mark');
         expect(result.body.data.lastName).to.be.equal('Smith');
-      //   expect(result.body).to.deep.include({
-      //     firstName: 'Mark',
-      //     lastName: 'Smith',
-      //     jobTitle: 'Marketing Manager'
-      //   });
-      //   expect(result.body.test).to.be.undefined;
-      //   expect(result.body.oihApplicationRecords[0]).to.deep.include({
-      //     recordUid: 98123
-      //   });
-      //   expect(result.body.addresses).to.be.an('array');
-      //   expect(result.body.addresses[0]).to.deep.include({
-      //     street: 'Main Str.',
-      //     streetNumber: '120'
-      //   });
+        expect(result.body.data.jobTitle).to.be.equal('Marketing Manager');
+        expect(result.body.data.addresses).to.be.an('array');
+        expect(result.body.data.addresses[0]).to.deep.include({
+          street: 'Main Str.',
+          streetNumber: '120',
+        });
       });
   });
 
