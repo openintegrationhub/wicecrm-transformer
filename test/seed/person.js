@@ -47,7 +47,7 @@ const personFromOih = () => {
       ],
       contactData: [{
         value: '123456789',
-        type: 'phone',
+        type: 'mobil',
         description: 'primary',
       },
       {
@@ -56,12 +56,12 @@ const personFromOih = () => {
         description: 'private',
       },
       {
-        value: '95248793',
-        type: 'phone',
+        value: '98326307',
+        type: 'mobile',
         description: 'mobile',
       },
       {
-        value: 'jon@doe.com',
+        value: 'john@doe.com',
         type: 'email',
         description: 'private',
       },
@@ -69,11 +69,6 @@ const personFromOih = () => {
         value: 'xing.de/yourUsername',
         type: 'xing',
         description: 'xing',
-      },
-      {
-        value: '98326307',
-        type: 'phone',
-        description: 'secondary',
       },
       ],
       calendar: [{
