@@ -72,7 +72,7 @@ const personFromOih = () => {
       },
       {
         value: '98326307',
-        type: 'phone',
+        type: 'mobile',
         description: 'secondary',
       },
       ],
