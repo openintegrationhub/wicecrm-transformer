@@ -8,14 +8,13 @@ const transformPersonFromOih = require('../lib/actions/transformPersonFromOih');
 const transformPersonToOih = require('../lib/actions/transformPersonToOih');
 
 describe('Transformation test', () => {
-  it.only('should handle simple person tranformation in direction from OIH', () => {
+  it('should handle simple person tranformation in direction from OIH', () => {
     const exp = personFromOih();
     return transformPersonFromOih.process(messages.newMessageWithBody(exp))
       .then((result) => {
         expect(result.body).to.be.an('object');
         expect(result.body.data.firstname).to.be.equal('John');
         expect(result.body.data.name).to.be.equal('Doe');
-        console.log(result.body.data);
         expect(result.body.data).to.deep.include({
           name: 'Doe',
           firstname: 'John',
@@ -23,11 +22,6 @@ describe('Transformation test', () => {
           email: 'john@doe.com',
           phone: '00224477',
           mobile_phone: '123456789',
-          // private_street: 'Hohestr',
-          // private_street_number: '3',
-          // private_zip_code: '50667',
-          // private_town: 'Cologne',
-          // private_country: 'Germany',
         });
       });
   });
