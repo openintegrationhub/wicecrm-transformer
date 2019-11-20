@@ -70,6 +70,11 @@ const personFromOih = () => {
         type: 'xing',
         description: 'xing',
       },
+      {
+        value: '98326307',
+        type: 'mobile',
+        description: 'secondary',
+      },
       ],
       calendar: [{
         calendar: 'http://example.org/kalender/emuster',
