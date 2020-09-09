@@ -116,6 +116,7 @@ const personToOih = () => {
     },
     data: {
       rowid: 98123,
+      for_rowid: 36863,
       name: 'Smith',
       firstname: 'Mark',
       private_street: 'Main Str.',

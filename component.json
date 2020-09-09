@@ -33,6 +33,14 @@
       "metadata": {
         "out": {}
       }
+    },
+    "transformPersonOrOrganizationToOih": {
+      "title": "Transform a person or organization to OIH",
+      "description": "Conditionally applies either the person or organization transformation",
+      "main": "./lib/actions/transformPersonOrOrganizationToOih.js",
+      "metadata": {
+        "out": {}
+      }
     }
   }
 }

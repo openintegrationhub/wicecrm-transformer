@@ -46,6 +46,10 @@ describe('Transformation test', () => {
           street: 'Main Str.',
           streetNumber: '120',
         });
+        expect(result.body.data.relations).to.be.an('array');
+        expect(result.body.data.relations[0].label).to.be.equal('employee');
+        expect(result.body.data.relations[0].uids).to.be.an('array');
+        expect(result.body.data.relations[0].uids[0]).to.be.equal('36863');
       });
   });
 
